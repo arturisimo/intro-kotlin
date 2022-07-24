@@ -13,7 +13,6 @@ import org.springframework.boot.test.web.client.TestRestTemplate
 import org.springframework.boot.test.web.client.getForEntity
 import org.springframework.http.HttpStatus
 
-@TestInstance(Lifecycle.PER_CLASS)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class IntegrationTests(@Autowired val restTemplate: TestRestTemplate) {
 

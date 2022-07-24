@@ -1,8 +1,8 @@
 package edu.app.blog.repository
 
-import edu.app.blog.entities.User
+import edu.app.blog.entities.UserBlog
 import org.springframework.data.repository.CrudRepository
 
-interface UserRepository : CrudRepository<User, Long> {
-    fun findByLogin(login: String): User?
+interface UserRepository : CrudRepository<UserBlog, Long> {
+    fun findByLogin(login: String): UserBlog?
 }
