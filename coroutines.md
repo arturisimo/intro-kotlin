@@ -1,13 +1,14 @@
 ## Couroutines
 
-Las [coroutines](https://github.com/Kotlin/kotlinx.coroutines) cr es un patrón de diseño de concurrencia. Conceptualmente es similar a un thread, en el sentido que permite ejecutar código de forma concurrente, pero no está vinculado a un thread en concreto, ya 
-que una cr permite suspender la ejecución en un hilo y reanudarlo en otro. Los cr se consideran thread ligero
+Las [coroutines] se consideran thread muy ligero, se pueden ejecutar un gran número sin impacto.
 
     dependencies {
         implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
     }
 
-Un ejemplo de cr sería: 
+Una CR se tiene que llamar dentro de un scope llamado **CoroutineScope**. 
+La más simple se puede definir en un bloque **runBlocking** se bloquea la ejecución hasta que todas las CR han terminado
+
 
     fun main() = runBlocking { // this: CoroutineScope
         launch { // launch a new coroutine and continue
